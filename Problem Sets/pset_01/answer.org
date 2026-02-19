@@ -1,6 +1,6 @@
 #+title: Problem Set 1 Answer
 
-* DONE Question 1: Economic Data [4/4]
+* TODO Question 1: Economic Data [3/4]
 :PROPERTIES:
 :header-args:python: :session *rgdp* :results output
 :END:
@@ -14,7 +14,8 @@
                    index_col=["observation_date"])
 #+end_src
 
-** DONE US Real Gross Domestic Product plot
+** DONE Q 1.1 [4/4]
+*** DONE US Real Gross Domestic Product plot
 #+begin_src python :results file graphics :exports results :file ./img/GDPC1.png
   x = df.index
   y = df["GDPC1"]
@@ -38,7 +39,7 @@
 #+RESULTS:
 [[file:./img/GDPC1.png]]
 
-** DONE real GDP in the fourth quarter of 2021
+*** DONE real GDP in the fourth quarter of 2021
 
 #+begin_src python :results output
   q4_2021 = df.loc['2021-10-01', 'GDPC1']
@@ -48,7 +49,7 @@
 #+RESULTS:
 : 2021 Q4 Real GDP: 21988.737
 
-** DONE real GDP fall "from peak to trough" during during the COVID-19 recession
+*** DONE real GDP fall "from peak to trough" during during the COVID-19 recession
 
 #+begin_src python :results output
   covid = df.loc['2019-01-01':'2021-01-01']
@@ -65,7 +66,7 @@
 : trough: 19077.992
 : drop: 2004.14, 9.51%
 
-** DONE real GDP fall from peak to trough during the Great Recession(2007-2009)
+*** DONE real GDP fall from peak to trough during the Great Recession(2007-2009)
 
 #+begin_src python :results output
   gr = df.loc['2006-10-01':'2010-01-01']
@@ -79,7 +80,7 @@
 #+RESULTS:
 : GDP drop 674.15, 3.98%
 
-* DONE Question 2 [3/3]
+** DONE Q 1.2 [3/3]
 :PROPERTIES:
 :header-args:python: :session *unrate* :results output
 :END:
@@ -94,7 +95,7 @@
                    index_col=["observation_date"])
 #+end_src
 
-** DONE plot unemployment
+*** DONE plot unemployment
 Download and plot the series for quarterly unemployment (UNRATE), from the
 earliest available date to the latest.
 
@@ -120,7 +121,7 @@ earliest available date to the latest.
 #+RESULTS:
 [[file:./img/UNRATE.png]]
 
-** DONE compare unemployment rate
+*** DONE compare unemployment rate
 How does the unemployment rate in Q4 2019 compare to Q2 2020?
 
 #+begin_src python :results output
@@ -138,7 +139,7 @@ How does the unemployment rate in Q4 2019 compare to Q2 2020?
 : in q2_2020 is 14.8%
 : UNRATE go up 11.20%
 
-** DONE compare unemployment rate
+*** DONE compare unemployment rate
 How do the changes in unemployment rate now compare to the period between Q2
 2008 and Q2 2009?
 
@@ -157,8 +158,8 @@ How do the changes in unemployment rate now compare to the period between Q2
 : in q2_2009 is 9.0%
 : UNRATE go up 4.00%
 
-* DONE Question 3 [2/2]
-** DONE plot and describe the graph
+** DONE Q 1.3 [2/2]
+*** DONE plot and describe the graph
 Using the real GDP series you downloaded in (1),
 compute the quarterly output growth rate as
 \(  g_{t} = (\frac{\text{GDP}_{t } - \text{GDP}_{t-1}}{\text{GDP}_{t-1}}) \times 100 \).
@@ -172,7 +173,7 @@ and \( g_t \) on the x-axis over the period 1960-2019,
 and over the period 1960-2022.
 Describe the pattern you find in words.
 
-#+begin_src python :results file graphics :exports results :file ./img/q3.png
+#+begin_src python :results file graphics :exports results :file ./img/q13.png
   import matplotlib.pyplot as plt
   import matplotlib.dates as mdates
   import pandas as pd
@@ -224,13 +225,15 @@ Describe the pattern you find in words.
 #+end_src
 
 #+RESULTS:
-[[file:./img/q3.png]]
+[[file:./img/q13.png]]
 
 产出增长率和失业率是负相关的关系。
 
-** DONE answer a question
+*** DONE answer a question
 Are the changes in output and unemployment during the 2008 financial crisis and
 the COVID-19 recession qualitatively consistent with what we would expect from
 Okun’s law?
 
 当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
+
+** TODO Q 1.4
