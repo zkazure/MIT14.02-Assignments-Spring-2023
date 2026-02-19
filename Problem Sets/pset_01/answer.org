@@ -157,7 +157,7 @@ How do the changes in unemployment rate now compare to the period between Q2
 : in q2_2009 is 9.0%
 : UNRATE go up 4.00%
 
-* TODO Question 3 [2/2]
+* DONE Question 3 [2/2]
 ** DONE plot and describe the graph
 Using the real GDP series you downloaded in (1),
 compute the quarterly output growth rate as
