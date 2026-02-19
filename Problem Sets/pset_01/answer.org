@@ -2,7 +2,7 @@
 
 * DONE Question 1: Economic Data [4/4]
 :PROPERTIES:
-:header-args:python: :session *gdp* :results output
+:header-args:python: :session *rgdp* :results output
 :END:
 #+begin_src python :results none
   import pandas as pd
