@@ -78,3 +78,16 @@
 
 #+RESULTS:
 : GDP drop 674.15, 3.98%
+
+* TODO Question 2 [0/3]
+
+** TODO plot unemployment
+Download and plot the series for quarterly unemployment (UNRATE), from the
+earliest available date to the latest.
+
+** TODO compare unemployment rate
+How does the unemployment rate in Q4 2019 compare to Q2 2020?
+
+** TODO compare unemployment rate
+How do the changes in unemployment rate now compare to the period between Q2
+2008 and Q2 2009?
