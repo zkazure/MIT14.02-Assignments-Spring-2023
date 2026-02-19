@@ -237,7 +237,7 @@ Okun’s law?
 
 当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
 
-** TODO Q 1.4 [2/3]
+** TODO Q 1.4 [3/3]
 :PROPERTIES:
 :header-args:python: :session *q14* :results output
 :END:
@@ -287,8 +287,17 @@ How does the non-employment to population ratio in Q4 2019 compare to Q2 2020?
 : 2019 q4: 80.33333333333333
 : 2020 q2: 71.5
 
-
-
-*** TODO Q&A
+*** DONE Q&A
 How do the changes in the non-employment to population ratio compare to the
 period between Q2 2008 and Q2 2009?
+
+#+begin_src python :results output
+  q2_2008 = df.loc["2008-04-01":"2008-06-01"]
+  q2_2009 = df.loc["2009-04-01":"2009-06-01"]
+  print(f"2008 q2: {q2_2008["LNS12300060"].mean()}")
+  print(f"2009 q2: {q2_2009["LNS12300060"].mean()}")
+#+end_src
+
+#+RESULTS:
+: 2008 q2: 79.5
+: 2009 q2: 76.00000000000001
