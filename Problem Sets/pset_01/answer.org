@@ -1,0 +1,15 @@
+#+title: Problem Set 1 Answer
+
+* Question 1: Economic Data
+** US Real Gross Domestic Product
+
+- [ ] download data, =GDPC1=
+- [ ] plot data
+
+1. What is the fourth quarter of 2021 real GDP?
+2. At a quarterly frequency,
+   how much did real GDP fall “from peak to trough” during the COVID-19 recession?
+   (i.e.: from the maximum RGDP before the recession,
+   to the lowest point during the recession.)
+3. How much did real GDP fall from peak to trough during the Great Recession
+   (2007-2009)?
