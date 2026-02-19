@@ -237,13 +237,41 @@ Okun’s law?
 
 当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
 
-** TODO Q 1.4 [0/3]
+** TODO Q 1.4 [1/3]
+:PROPERTIES:
+:header-args:python: :session *q14* :results output
+:END:
 
-*** TODO plot
+#+begin_src python :results none
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+  import numpy as np
+
+  df = pd.read_csv("./data/LNS12300060.csv",
+                   parse_dates=["observation_date"],
+                   index_col="observation_date")
+#+end_src
+
+*** DONE plot
 Download the quarterly Employment to Population Ratio for 25-54 year old
 (LNS12300060), from the earliest available date to the latest.
 Plot the non-employment to population ratio,
 calculated as 100% - employment to population ratio.
+
+#+begin_src python :results file graphics :exports results :file ./img/q14.png
+  plt.title("unemployment to population ratio")
+  plt.ylabel("100%")
+  plt.plot(df.index, df["LNS12300060"], label="non-employment-population-ratio")
+  plt.legend()
+
+  plt.gca().xaxis.set_major_locator(mdates.YearLocator(5))
+  plt.gcf().autofmt_xdate()
+  plt.grid(True)
+#+end_src
+
+#+RESULTS:
+[[file:./img/q14.png]]
 
 *** TODO Q&A
 How does the non-employment to population ratio in Q4 2019 compare to Q2 2020?
