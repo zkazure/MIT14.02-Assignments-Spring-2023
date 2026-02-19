@@ -79,7 +79,7 @@
 #+RESULTS:
 : GDP drop 674.15, 3.98%
 
-* TODO Question 2 [1/3]
+* TODO Question 2 [2/3]
 :PROPERTIES:
 :header-args:python: :session *unrate* :results output
 :END:
@@ -120,8 +120,23 @@ earliest available date to the latest.
 #+RESULTS:
 [[file:./img/UNRATE.png]]
 
-** TODO compare unemployment rate
+** DONE compare unemployment rate
 How does the unemployment rate in Q4 2019 compare to Q2 2020?
+
+#+begin_src python :results output
+  q4_2019 = df.loc["2019-10-01"]["UNRATE"]
+  q2_2020 = df.loc["2020-04-01"]["UNRATE"]
+  print("The Unemployment Rate:")
+  print(f"in q4_2019 is {q4_2019}%")
+  print(f"in q2_2020 is {q2_2020}%")
+  print(f"UNRATE go up {(q2_2020 - q4_2019):.2f}%")
+#+end_src
+
+#+RESULTS:
+: The Unemployment Rate:
+: in q4_2019 is 3.6%
+: in q2_2020 is 14.8%
+: UNRATE go up 11.20%
 
 ** TODO compare unemployment rate
 How do the changes in unemployment rate now compare to the period between Q2
