@@ -1,6 +1,6 @@
 #+title: Problem Set 1 Answer
 
-* TODO Question 1: Economic Data [3/4]
+* TODO Question 1: Economic Data [4/4]
 ** DONE Q 1.1 [4/4]
 :PROPERTIES:
 :header-args:python: :session *q11* :results output
@@ -237,7 +237,7 @@ Okun’s law?
 
 当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
 
-** TODO Q 1.4 [3/3]
+** DONE Q 1.4 [3/3]
 :PROPERTIES:
 :header-args:python: :session *q14* :results output
 :END:
