@@ -236,4 +236,17 @@ Okun’s law?
 
 当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
 
-** TODO Q 1.4
+** TODO Q 1.4 [0/3]
+
+*** TODO plot
+Download the quarterly Employment to Population Ratio for 25-54 year old
+(LNS12300060), from the earliest available date to the latest.
+Plot the non-employment to population ratio,
+calculated as 100% - employment to population ratio.
+
+*** TODO Q&A
+How does the non-employment to population ratio in Q4 2019 compare to Q2 2020?
+
+*** TODO Q&A
+How do the changes in the non-employment to population ratio compare to the
+period between Q2 2008 and Q2 2009?
