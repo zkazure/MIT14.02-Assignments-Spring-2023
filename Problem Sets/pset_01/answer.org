@@ -4,9 +4,41 @@
 ** US Real Gross Domestic Product
 
 - [X] download data, =GDPC1=
-- [ ] plot data
+- [X] plot data
+
+*** plot
+#+begin_src python :results file graphics :exports results :file ./img/GDPC1.png
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+
+  df = pd.read_csv('./data/GDPC1.csv',
+                   parse_dates=["observation_date"],
+                   index_col=["observation_date"])
+  x = df.index
+  y = df["GDPC1"]
+
+  plt.title("US Real Gross Domestic Product")
+  plt.xlabel("")
+  plt.ylabel("Billions of Chained 2017 Dollars")
+  plt.plot(x, y, label="Real Gross Domestic Product")
+  plt.legend()
+
+  ax = plt.gca()
+  ax.xaxis.set_major_locator(mdates.YearLocator(5))
+  ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+  plt.gcf().autofmt_xdate()
+
+  plt.grid(True)
+
+  plt.savefig("./img/GDPC1.png")
+#+end_src
+
+#+RESULTS:
+[[file:./img/GDPC1.png]]
 
 
+*** problems
 1. What is the fourth quarter of 2021 real GDP?
 2. At a quarterly frequency,
    how much did real GDP fall “from peak to trough” during the COVID-19 recession?
