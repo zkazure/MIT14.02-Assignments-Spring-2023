@@ -157,18 +157,16 @@ How do the changes in unemployment rate now compare to the period between Q2
 : in q2_2009 is 9.0%
 : UNRATE go up 4.00%
 
-* TODO Question 3 [0/4]
-** TODO compute output growth rate
+* TODO Question 3 [0/2]
+** TODO plot and describe the graph
 Using the real GDP series you downloaded in (1),
 compute the quarterly output growth rate as
 \(  g_{t} = (\frac{\text{GDP}_{t } - \text{GDP}_{t-1}}{\text{GDP}_{t-1}}) \times 100 \).
 
-** TODO compute the quarterly change in the unemployment rate
 Next, using the unemployment rate series you downloaded in (2),
 compute the quarterly change in the unemployment rate as
 \( \Delta u_t = u_t - u_{t-1} \).
 
-** TODO plot and describe the graph
 Plot \( \Delta u_t \) on the y-axis,
 and \( g_t \) on the x-axis over the period 1960-2019,
 and over the period 1960-2022.
