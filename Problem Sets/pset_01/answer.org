@@ -79,11 +79,46 @@
 #+RESULTS:
 : GDP drop 674.15, 3.98%
 
-* TODO Question 2 [0/3]
+* TODO Question 2 [1/3]
+:PROPERTIES:
+:header-args:python: :session *unrate* :results output
+:END:
 
-** TODO plot unemployment
+#+begin_src python :results none
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+
+  df = pd.read_csv("./data/UNRATE.csv",
+                   parse_dates=["observation_date"],
+                   index_col=["observation_date"])
+#+end_src
+
+** DONE plot unemployment
 Download and plot the series for quarterly unemployment (UNRATE), from the
 earliest available date to the latest.
+
+#+begin_src python :results file graphics :exports results :file ./img/UNRATE.png
+  plt.title("UNRATE")
+
+  x = df.index
+  y = df["UNRATE"]
+  plt.xlabel("observation_date")
+  plt.ylabel("UNRATE")
+
+  plt.plot(x, y, label="Unemployment Rate")
+  plt.legend()
+
+  plt.grid(True)
+
+  ax = plt.gca()
+  ax.xaxis.set_major_locator(mdates.YearLocator(5))
+  ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+  plt.gcf().autofmt_xdate()
+#+end_src
+
+#+RESULTS:
+[[file:./img/UNRATE.png]]
 
 ** TODO compare unemployment rate
 How does the unemployment rate in Q4 2019 compare to Q2 2020?
