@@ -3,8 +3,9 @@
 * Question 1: Economic Data
 ** US Real Gross Domestic Product
 
-- [ ] download data, =GDPC1=
+- [X] download data, =GDPC1=
 - [ ] plot data
+
 
 1. What is the fourth quarter of 2021 real GDP?
 2. At a quarterly frequency,
