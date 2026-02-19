@@ -202,9 +202,25 @@ Describe the pattern you find in words.
 
   fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
+  slope19, intercept19 = np.polyfit(df19["GDPC1"], df19["UNRATE"], 1)
+  x19 = np.array([df19["GDPC1"].min(), df19["GDPC1"].max()])
+  y19 = slope19 * x19 + intercept19
+  axes[0].plot(x19, y19, ls="--")
   axes[0].scatter(df19["GDPC1"], df19["UNRATE"], alpha=0.6, color="red")
-  axes[1].scatter(df22["GDPC1"], df22["UNRATE"], alpha=0.6, color="blue")
+  axes[0].grid(True)
+  axes[0].set_title("1960-2019")
+  axes[0].set_xlabel("g_t")
+  axes[0].set_ylabel("du_t")
 
+  slope22, intercept22 = np.polyfit(df22["GDPC1"], df22["UNRATE"], 1)
+  x22 = np.array([df22["GDPC1"].min(), df22["GDPC1"].max()])
+  y22 = slope22 * x22 + intercept22
+  axes[1].plot(x22, y22, ls="--")
+  axes[1].scatter(df22["GDPC1"], df22["UNRATE"], alpha=0.6, color="blue")
+  axes[1].grid(True)
+  axes[1].set_title("1960-2022")
+  axes[1].set_xlabel("g_t")
+  axes[1].set_ylabel("du_t")
 #+end_src
 
 #+RESULTS:
