@@ -157,7 +157,7 @@ How do the changes in unemployment rate now compare to the period between Q2
 : in q2_2009 is 9.0%
 : UNRATE go up 4.00%
 
-* TODO Question 3 [1/2]
+* TODO Question 3 [2/2]
 ** DONE plot and describe the graph
 Using the real GDP series you downloaded in (1),
 compute the quarterly output growth rate as
@@ -228,7 +228,9 @@ Describe the pattern you find in words.
 
 产出增长率和失业率是负相关的关系。
 
-** TODO answer a question
+** DONE answer a question
 Are the changes in output and unemployment during the 2008 financial crisis and
 the COVID-19 recession qualitatively consistent with what we would expect from
 Okun’s law?
+
+当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
