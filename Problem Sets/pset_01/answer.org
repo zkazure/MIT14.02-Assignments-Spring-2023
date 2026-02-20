@@ -319,3 +319,9 @@ helpful)?
 
 
 During the COVID-19 period, there is lower labor force participation.
+
+* TODO Question 2 Measure nominal and real GDP [0/4]
+** TODO Q 2.1
+** TODO Q 2.2
+** TODO Q 2.3
+** TODO Q 2.4
