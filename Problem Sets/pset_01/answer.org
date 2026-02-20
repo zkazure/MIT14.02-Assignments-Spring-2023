@@ -320,7 +320,7 @@ helpful)?
 
 During the COVID-19 period, there is lower labor force participation.
 
-* TODO Question 2 Measure nominal and real GDP [2/4]
+* TODO Question 2 Measure nominal and real GDP [3/4]
 ** DONE Q 2.1
 Compute the Nominal GDP of each year.
 
@@ -344,5 +344,36 @@ Then compute annual RGDP growth for each year and express it as a percentage.
 g_{19, 20}(19) &= - 44.27\% \\
 g_{20, 21}(19) &= 114.22 \%
 \end{align*}
-** TODO Q 2.3
+** DONE Q 2.3
+Compute the RGDP for each year using 2020 as the base year.
+Then compute the RGDP growth and express it as a percentage.
+Explain why it is different from the RGDP growth computed using 2019 as the base year.
+Do the same using 2021 as the base year.
+
+
+\begin{align*}
+\text{RGDP}_{19}(20) &= 1170 \\
+\text{RGDP}_{20}(20) &= 1250 \\
+\text{RGDP}_{21}(20) &= 2150 \\
+\end{align*}
+
+\begin{align*}
+g_{19, 20}(20) &= 6.84\% \\
+g_{20, 21}(20) &= 72.00 \%
+\end{align*}
+
+
+\begin{align*}
+\text{RGDP}_{19}(21) &= 1605 \\
+\text{RGDP}_{20}(21) &= 1000 \\
+\text{RGDP}_{21}(21) &= 1975 \\
+\end{align*}
+
+\begin{align*}
+g_{19, 20}(21) &= 37.69 \% \\
+g_{20, 21}(21) &= 97.50 \%
+\end{align*}
+
+
+Because of the inflation. 
 ** TODO Q 2.4
