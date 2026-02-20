@@ -320,7 +320,7 @@ helpful)?
 
 During the COVID-19 period, there is lower labor force participation.
 
-* TODO Question 2 Measure nominal and real GDP [3/4]
+* TODO Question 2 Measure nominal and real GDP [4/4]
 ** DONE Q 2.1
 Compute the Nominal GDP of each year.
 
@@ -375,5 +375,11 @@ g_{20, 21}(21) &= 97.50 \%
 \end{align*}
 
 
-Because of the inflation. 
-** TODO Q 2.4
+Because of the inflation.
+** DONE Q 2.4
+\[ g_{T-t, T} ^{\text{BEA}} = \frac{g_{T-t, T}(T-t) + g_{T-t, T}(T)}{2} \]
+
+
+\[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
+
+\[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
