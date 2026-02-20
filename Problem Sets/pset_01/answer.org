@@ -1,6 +1,6 @@
 #+title: Problem Set 1 Answer
 
-* TODO Question 1: Economic Data [5/5]
+* DONE Question 1: Economic Data [5/5]
 ** DONE Q 1.1 [4/4]
 :PROPERTIES:
 :header-args:python: :session *q11* :results output
