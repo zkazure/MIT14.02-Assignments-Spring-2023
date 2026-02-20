@@ -320,7 +320,7 @@ helpful)?
 
 During the COVID-19 period, there is lower labor force participation.
 
-* TODO Question 2 Measure nominal and real GDP [4/4]
+* DONE Question 2 Measure nominal and real GDP [4/4]
 ** DONE Q 2.1
 Compute the Nominal GDP of each year.
 
