@@ -1,0 +1,428 @@
+#+title: Problem Set 1 Answer
+
+* DONE Question 1: Economic Data [5/5]
+** DONE Q 1.1 [4/4]
+:PROPERTIES:
+:header-args:python: :session *q11* :results output
+:END:
+#+begin_src python :results none
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+
+  df = pd.read_csv("./data/GDPC1.csv",
+                   parse_dates=["observation_date"],
+                   index_col=["observation_date"])
+#+end_src
+
+
+*** DONE US Real Gross Domestic Product plot
+#+begin_src python :results file graphics :exports results :file ./img/GDPC1.png
+  x = df.index
+  y = df["GDPC1"]
+
+  plt.title("US Real Gross Domestic Product")
+  plt.xlabel("")
+  plt.ylabel("Billions of Chained 2017 Dollars")
+  plt.plot(x, y, label="Real Gross Domestic Product")
+  plt.legend()
+
+  ax = plt.gca()
+  ax.xaxis.set_major_locator(mdates.YearLocator(5))
+  ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+  plt.gcf().autofmt_xdate()
+
+  plt.grid(True)
+
+  plt.savefig("./img/GDPC1.png")
+#+end_src
+
+#+RESULTS:
+[[file:./img/GDPC1.png]]
+
+*** DONE real GDP in the fourth quarter of 2021
+
+#+begin_src python :results output
+  q4_2021 = df.loc['2021-10-01', 'GDPC1']
+  print(f"2021 Q4 Real GDP: {q4_2021}")
+#+end_src
+
+#+RESULTS:
+: 2021 Q4 Real GDP: 21988.737
+
+*** DONE real GDP fall "from peak to trough" during during the COVID-19 recession
+
+#+begin_src python :results output
+  covid = df.loc['2019-01-01':'2021-01-01']
+  covid_peak = covid['GDPC1'].max()
+  covid_trough = covid['GDPC1'].min()
+  covid_drop = covid_peak - covid_trough
+  print(f"During Covid")
+  print(f"peak: {covid_peak}\ntrough: {covid_trough}\ndrop: {covid_drop:.2f}, {(covid_drop / covid_peak * 100):.2f}%")
+#+end_src
+
+#+RESULTS:
+: During Covid
+: peak: 21082.134
+: trough: 19077.992
+: drop: 2004.14, 9.51%
+
+*** DONE real GDP fall from peak to trough during the Great Recession(2007-2009)
+
+#+begin_src python :results output
+  gr = df.loc['2006-10-01':'2010-01-01']
+  gr_peak = gr["GDPC1"].max()
+  gr_trough = gr["GDPC1"].min()
+  gr_drop = gr_peak - gr_trough
+
+  print(f"GDP drop {gr_drop:.2f}, {(gr_drop / gr_peak * 100):.2f}%")
+#+end_src
+
+#+RESULTS:
+: GDP drop 674.15, 3.98%
+
+** DONE Q 1.2 [3/3]
+:PROPERTIES:
+:header-args:python: :session *q12* :results output
+:END:
+
+#+begin_src python :results none
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+
+  df = pd.read_csv("./data/UNRATE.csv",
+                   parse_dates=["observation_date"],
+                   index_col=["observation_date"])
+#+end_src
+
+*** DONE plot unemployment
+Download and plot the series for quarterly unemployment (UNRATE), from the
+earliest available date to the latest.
+
+#+begin_src python :results file graphics :exports results :file ./img/UNRATE.png
+  plt.title("UNRATE")
+
+  x = df.index
+  y = df["UNRATE"]
+  plt.xlabel("observation_date")
+  plt.ylabel("UNRATE")
+
+  plt.plot(x, y, label="Unemployment Rate")
+  plt.legend()
+
+  plt.grid(True)
+
+  ax = plt.gca()
+  ax.xaxis.set_major_locator(mdates.YearLocator(5))
+  ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+  plt.gcf().autofmt_xdate()
+#+end_src
+
+#+RESULTS:
+[[file:./img/UNRATE.png]]
+
+*** DONE compare unemployment rate
+How does the unemployment rate in Q4 2019 compare to Q2 2020?
+
+#+begin_src python :results output
+  q4_2019 = df.loc["2019-10-01"]["UNRATE"]
+  q2_2020 = df.loc["2020-04-01"]["UNRATE"]
+  print("The Unemployment Rate:")
+  print(f"in q4_2019 is {q4_2019}%")
+  print(f"in q2_2020 is {q2_2020}%")
+  print(f"UNRATE go up {(q2_2020 - q4_2019):.2f}%")
+#+end_src
+
+#+RESULTS:
+: The Unemployment Rate:
+: in q4_2019 is 3.6%
+: in q2_2020 is 14.8%
+: UNRATE go up 11.20%
+
+*** DONE compare unemployment rate
+How do the changes in unemployment rate now compare to the period between Q2
+2008 and Q2 2009?
+
+#+begin_src python :results output
+  q2_2008 = df.loc["2008-04-01"]["UNRATE"]
+  q2_2009 = df.loc["2009-04-01"]["UNRATE"]
+  print("The Unemployment Rate:")
+  print(f"in q2_2008 is {q2_2008}%")
+  print(f"in q2_2009 is {q2_2009}%")
+  print(f"UNRATE go up {(q2_2009 - q2_2008):.2f}%")
+#+end_src
+
+#+RESULTS:
+: The Unemployment Rate:
+: in q2_2008 is 5.0%
+: in q2_2009 is 9.0%
+: UNRATE go up 4.00%
+
+** DONE Q 1.3 [2/2]
+*** DONE plot and describe the graph
+Using the real GDP series you downloaded in (1),
+compute the quarterly output growth rate as
+\(  g_{t} = (\frac{\text{GDP}_{t } - \text{GDP}_{t-1}}{\text{GDP}_{t-1}}) \times 100 \).
+
+Next, using the unemployment rate series you downloaded in (2),
+compute the quarterly change in the unemployment rate as
+\( \Delta u_t = u_t - u_{t-1} \).
+
+Plot \( \Delta u_t \) on the y-axis,
+and \( g_t \) on the x-axis over the period 1960-2019,
+and over the period 1960-2022.
+Describe the pattern you find in words.
+
+#+begin_src python :results file graphics :exports results :file ./img/q13.png
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+  import numpy as np
+
+  gdp = pd.read_csv("./data/GDPC1.csv",
+                    parse_dates=["observation_date"],
+                    index_col="observation_date")
+  unrate = pd.read_csv("./data/UNRATE.csv",
+                       parse_dates=["observation_date"],
+                       index_col="observation_date")
+
+  # pre-process
+  unrate = unrate.reset_index()
+  unrate = unrate.groupby(np.arange(len(unrate)) // 3).agg({
+      "observation_date": "first",
+      "UNRATE": "mean"
+  })
+  unrate.set_index("observation_date", inplace=True)
+
+  dg = (gdp - gdp.shift(1)) / gdp.shift(1) * 100
+  du = unrate - unrate.shift(1)
+
+  df = dg.join(du).dropna()
+  df19 = df.loc["1960-01-01":"2020-01-01"]
+  df22 = df.loc["1960-01-01":"2023-01-01"]
+
+  fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+  slope19, intercept19 = np.polyfit(df19["GDPC1"], df19["UNRATE"], 1)
+  x19 = np.array([df19["GDPC1"].min(), df19["GDPC1"].max()])
+  y19 = slope19 * x19 + intercept19
+  axes[0].plot(x19, y19, ls="--")
+  axes[0].scatter(df19["GDPC1"], df19["UNRATE"], alpha=0.6, color="red")
+  axes[0].grid(True)
+  axes[0].set_title("1960-2019")
+  axes[0].set_xlabel("g_t")
+  axes[0].set_ylabel("du_t")
+
+  slope22, intercept22 = np.polyfit(df22["GDPC1"], df22["UNRATE"], 1)
+  x22 = np.array([df22["GDPC1"].min(), df22["GDPC1"].max()])
+  y22 = slope22 * x22 + intercept22
+  axes[1].plot(x22, y22, ls="--")
+  axes[1].scatter(df22["GDPC1"], df22["UNRATE"], alpha=0.6, color="blue")
+  axes[1].grid(True)
+  axes[1].set_title("1960-2022")
+  axes[1].set_xlabel("g_t")
+  axes[1].set_ylabel("du_t")
+#+end_src
+
+#+RESULTS:
+[[file:./img/q13.png]]
+
+产出增长率和失业率是负相关的关系。
+
+*** DONE answer a question
+Are the changes in output and unemployment during the 2008 financial crisis and
+the COVID-19 recession qualitatively consistent with what we would expect from
+Okun’s law?
+
+当然了，在产出增长率为负数的时候，数据点基本靠近拟合直线。
+
+** DONE Q 1.4 [3/3]
+:PROPERTIES:
+:header-args:python: :session *q14* :results output
+:END:
+
+#+begin_src python :results none
+  import matplotlib.pyplot as plt
+  import matplotlib.dates as mdates
+  import pandas as pd
+  import numpy as np
+
+  df = pd.read_csv("./data/LNS12300060.csv",
+                   parse_dates=["observation_date"],
+                   index_col="observation_date")
+#+end_src
+
+*** DONE plot
+Download the quarterly Employment to Population Ratio for 25-54 year old
+(LNS12300060), from the earliest available date to the latest.
+Plot the non-employment to population ratio,
+calculated as 100% - employment to population ratio.
+
+#+begin_src python :results file graphics :exports results :file ./img/q14.png
+  plt.title("unemployment to population ratio")
+  plt.ylabel("100%")
+  plt.plot(df.index, df["LNS12300060"], label="non-employment-population-ratio")
+  plt.legend()
+
+  plt.gca().xaxis.set_major_locator(mdates.YearLocator(5))
+  plt.gcf().autofmt_xdate()
+  plt.grid(True)
+#+end_src
+
+#+RESULTS:
+[[file:./img/q14.png]]
+
+*** DONE Q&A
+How does the non-employment to population ratio in Q4 2019 compare to Q2 2020?
+
+#+begin_src python :results output
+  q4_2019 = df.loc["2019-10-01":"2019-12-01"]
+  q2_2020 = df.loc["2020-04-01":"2020-06-01"]
+  print(f"2019 q4: {q4_2019["LNS12300060"].mean()}")
+  print(f"2020 q2: {q2_2020["LNS12300060"].mean()}")
+#+end_src
+
+#+RESULTS:
+: 2019 q4: 80.33333333333333
+: 2020 q2: 71.5
+
+*** DONE Q&A
+How do the changes in the non-employment to population ratio compare to the
+period between Q2 2008 and Q2 2009?
+
+#+begin_src python :results output
+  q2_2008 = df.loc["2008-04-01":"2008-06-01"]
+  q2_2009 = df.loc["2009-04-01":"2009-06-01"]
+  print(f"2008 q2: {q2_2008["LNS12300060"].mean()}")
+  print(f"2009 q2: {q2_2009["LNS12300060"].mean()}")
+#+end_src
+
+#+RESULTS:
+: 2008 q2: 79.5
+: 2009 q2: 76.00000000000001
+
+** DONE Q 1.5
+Compare the relationship between the evolution of the Unemployment Rate and the
+evolution of the Non-Employment to Population Ratio from peak to trough of the
+COVID-19 recession and the 2008 financial crisis.
+
+Why is there not a 1-1 relationship between the two variables (write down the
+formulas for each one)? What can you conclude about labor force participation
+during the COVID-19 recession (feel free to use FRED to answer this question if
+helpful)?
+
+
+- unemployment rate: \( \frac{U}{U+E} \)
+- non-employment to population rate:
+  \( 1 - \frac{E}{\text{population}} = 1 - \frac{E}{U+E+N} \)
+
+
+During the COVID-19 period, there is lower labor force participation.
+
+* DONE Question 2 Measure nominal and real GDP [4/4]
+** DONE Q 2.1
+Compute the Nominal GDP of each year.
+
+\begin{align*}
+\text{NGDP}_{19} &= 1956 \\
+\text{NGDP}_{20} &= 1250 \\
+\text{NGDP}_{21} &= 1975 \\
+\end{align*}
+
+** DONE Q 2.2
+Compute the real GDP for each year using 2019 as the base year.
+Then compute annual RGDP growth for each year and express it as a percentage.
+
+\begin{align*}
+\text{RGDP}_{19}(19) &= 1956 \\
+\text{RGDP}_{20}(19) &= 1090 \\
+\text{RGDP}_{21}(19) &= 2335 \\
+\end{align*}
+
+\begin{align*}
+g_{19, 20}(19) &= - 44.27\% \\
+g_{20, 21}(19) &= 114.22 \%
+\end{align*}
+** DONE Q 2.3
+Compute the RGDP for each year using 2020 as the base year.
+Then compute the RGDP growth and express it as a percentage.
+Explain why it is different from the RGDP growth computed using 2019 as the base year.
+Do the same using 2021 as the base year.
+
+
+\begin{align*}
+\text{RGDP}_{19}(20) &= 1170 \\
+\text{RGDP}_{20}(20) &= 1250 \\
+\text{RGDP}_{21}(20) &= 2150 \\
+\end{align*}
+
+\begin{align*}
+g_{19, 20}(20) &= 6.84\% \\
+g_{20, 21}(20) &= 72.00 \%
+\end{align*}
+
+
+\begin{align*}
+\text{RGDP}_{19}(21) &= 1605 \\
+\text{RGDP}_{20}(21) &= 1000 \\
+\text{RGDP}_{21}(21) &= 1975 \\
+\end{align*}
+
+\begin{align*}
+g_{19, 20}(21) &= 37.69 \% \\
+g_{20, 21}(21) &= 97.50 \%
+\end{align*}
+
+
+Because of the inflation.
+** DONE Q 2.4
+\[ g_{T-t, T} ^{\text{BEA}} = \frac{g_{T-t, T}(T-t) + g_{T-t, T}(T)}{2} \]
+
+
+\[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
+
+\[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
+* DONE Question 3 The Goods Market [7/7]
+
+** DONE what is \( c_{0}, c_1 \)
+\( c_0 \) is what people would consume in any condition.
+
+\( c_1 \) represents the "marginal propensity to consume".
+
+** DONE equilibrium condition
+\( Y = Z \)
+
+** DONE draw graph to represent equilibrium
+#+begin_src python :results file graphics :exports results :file ./img/q33.png
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  zx = np.linspace(0, 5, 5)
+  zy = zx
+
+  yy = 1 + zx * 0.6
+
+  plt.plot(zx, zy)
+  plt.plot(zx, yy)
+  plt.xlabel("Income, Y")
+  plt.ylabel("Demand Z, Production Y")
+
+#+end_src
+
+#+RESULTS:
+[[file:./img/q33.png]]
+
+** DONE equilibrium output
+\begin{align*}
+Y &= C + I + G  \\
+  &= c_0 + c_1(Y-T) + I + G
+\end{align*}
+
+\[ Y = \frac{1}{1 - c_1} \left[ c_0 - c_1 T + I +G \right] \]
+** DONE autonomous spending
+\[ \frac{\mathrm{d} Y}{\mathrm{d} c_{0}} = \frac{1}{1-c_{1}} \]
+** DONE Saving formula
+\[ S = C +I+G -T-C = I + G - T \]
+** DONE Saving and Government
+Since I and T are exogenous, S increases by the same amount of G
