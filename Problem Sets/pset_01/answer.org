@@ -383,3 +383,18 @@ Because of the inflation.
 \[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
 
 \[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
+* TODO Question 3 The Goods Market [0/7]
+
+** TODO what is \( c_{0}, c_1 \)
+
+** TODO equilibrium condition
+
+** TODO draw graph to represent equilibrium
+
+** TODO equilibrium output
+
+** TODO autonomous spending
+
+** TODO Saving formula
+
+** TODO Saving and Government
