@@ -383,14 +383,15 @@ Because of the inflation.
 \[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
 
 \[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
-* TODO Question 3 The Goods Market [1/7]
+* TODO Question 3 The Goods Market [2/7]
 
 ** DONE what is \( c_{0}, c_1 \)
 \( c_0 \) is what people would consume in any condition.
 
 \( c_1 \) represents the "marginal propensity to consume".
 
-** TODO equilibrium condition
+** DONE equilibrium condition
+\( Y = Z \)
 
 ** TODO draw graph to represent equilibrium
 
