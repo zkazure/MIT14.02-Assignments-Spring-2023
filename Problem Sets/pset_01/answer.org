@@ -383,7 +383,7 @@ Because of the inflation.
 \[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
 
 \[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
-* TODO Question 3 The Goods Market [2/7]
+* TODO Question 3 The Goods Market [3/7]
 
 ** DONE what is \( c_{0}, c_1 \)
 \( c_0 \) is what people would consume in any condition.
@@ -393,7 +393,25 @@ Because of the inflation.
 ** DONE equilibrium condition
 \( Y = Z \)
 
-** TODO draw graph to represent equilibrium
+** DONE draw graph to represent equilibrium
+#+begin_src python :results file graphics :exports results :file ./img/q33.png
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  zx = np.linspace(0, 5, 5)
+  zy = zx
+
+  yy = 1 + zx * 0.6
+
+  plt.plot(zx, zy)
+  plt.plot(zx, yy)
+  plt.xlabel("Income, Y")
+  plt.ylabel("Demand Z, Production Y")
+
+#+end_src
+
+#+RESULTS:
+[[file:./img/q33.png]]
 
 ** TODO equilibrium output
 
