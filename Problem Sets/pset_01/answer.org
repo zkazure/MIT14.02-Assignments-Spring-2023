@@ -302,11 +302,15 @@ period between Q2 2008 and Q2 2009?
 : 2008 q2: 79.5
 : 2009 q2: 76.00000000000001
 
-** TODO Q 1.5 [0/2]
-*** TODO Q 1.5.1
+** TODO Q 1.5 [1/2]
+*** DONE Q 1.5.1
 Compare the relationship between the evolution of the Unemployment Rate and the
 evolution of the Non-Employment to Population Ratio from peak to trough of the
 COVID-19 recession and the 2008 financial crisis.
+
+- unemployment rate: \( \frac{U}{U+E} \)
+- non-employment to population rate:
+  \( 1 - \frac{E}{\text{population}} = 1 - \frac{E}{U+E+N} \)
 
 *** TODO Q 1.5.2
 Why is there not a 1-1 relationship between the two variables (write down the
