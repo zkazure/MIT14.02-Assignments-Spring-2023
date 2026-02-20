@@ -383,7 +383,7 @@ Because of the inflation.
 \[ g_{19, 20} ^{\text{BEA}} = \frac{g_{19, 20}(19) + g_{19, 20}(20)}{2} = -18.72 \% \]
 
 \[ g_{20, 21} ^{BEA} = \frac{g_{20, 21}(20) + g_{20, 21}(21)}{2} = 70.75 \% \]
-* TODO Question 3 The Goods Market [5/7]
+* TODO Question 3 The Goods Market [6/7]
 
 ** DONE what is \( c_{0}, c_1 \)
 \( c_0 \) is what people would consume in any condition.
@@ -422,6 +422,6 @@ Y &= C + I + G  \\
 \[ Y = \frac{1}{1 - c_1} \left[ c_0 - c_1 T + I +G \right] \]
 ** DONE autonomous spending
 \[ \frac{\mathrm{d} Y}{\mathrm{d} c_{0}} = \frac{1}{1-c_{1}} \]
-** TODO Saving formula
-
+** DONE Saving formula
+\[ S = C +I+G -T-C = I + G - T \]
 ** TODO Saving and Government
