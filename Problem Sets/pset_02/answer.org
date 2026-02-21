@@ -47,6 +47,9 @@ Y &= C+I+G \\
 *** DONE 1.b.5
 \[ S= I \]
 
-* TODO Question 2 [/]
-
+* TODO Question 2 [0/4]
+** TODO Demand for money and bonds [/]
+** TODO Determining the interest rate [/]
+** TODO Maintaining the interest rate [/]
+** TODO Changing the interest rate [/]
 * TODO Question 3 [/]
