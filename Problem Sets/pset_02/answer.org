@@ -1,6 +1,6 @@
 #+title: Problem Set 2 Answer
 
-* TODO Question 1 [1/2]
+* TODO Question 1 [2/2]
 ** DONE Endogenous T [3/3]
 *** DONE 1.a.1
 \begin{align*}
@@ -19,7 +19,7 @@ T-G &= t_0 + t_1 Y -G \\
 
 will not decrease more than 1.
 
-** TODO Balanced Budget [4/5]
+** DONE Balanced Budget [5/5]
 *** DONE 1.b.1
 only \( I \) is exogenous.
 *** DONE 1.b.2
@@ -44,7 +44,9 @@ Y &= C+I+G \\
 于是政府支出对于生产的影响减小了。
 
 第二个由于政府愿意支出所有的收入，加强了消费者的信心，于是贡献率提高了。
-*** TODO 1.b.5
+*** DONE 1.b.5
+\[ S= I \]
+
 * TODO Question 2 [/]
 
 * TODO Question 3 [/]
