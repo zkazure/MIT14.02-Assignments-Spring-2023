@@ -19,7 +19,11 @@ T-G &= t_0 + t_1 Y -G \\
 
 will not decrease more than 1.
 
-** TODO Balanced Budget [/]
+** TODO Balanced Budget [1/3]
+*** DONE 1.b.1
+only \( I \) is exogenous. 
+*** TODO 1.b.2
+*** TODO 1.b.3
 * TODO Question 2 [/]
 
 * TODO Question 3 [/]
