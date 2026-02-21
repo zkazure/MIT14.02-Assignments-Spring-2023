@@ -1,7 +1,15 @@
 #+title: Problem Set 2 Answer
 
-* TODO Question 1 [/]
-
+* TODO Question 1 [0/2]
+** TODO Endogenous T [1/3]
+*** DONE 1.a.1
+\begin{align*}
+Y &=  c_0 + c_1 (Y - t_0 - t_1 Y) + I +G \\
+  &= \frac{c_{0}+C_{1}t_{0}+I+G}{1-c_{1}+c_{1}t_{1}}
+\end{align*}
+*** TODO 1.a.2
+*** TODO 1.a.3
+** TODO Balanced Budget [/]
 * TODO Question 2 [/]
 
 * TODO Question 3 [/]
