@@ -47,7 +47,7 @@ Y &= C+I+G \\
 *** DONE 1.b.5
 \[ S= I \]
 
-* TODO Question 2 [2/4]
+* TODO Question 2 [3/4]
 ** DONE Demand for money and bonds [2/2]
 *** DONE 2.a.1
 利率是如何影响货币需求的。
@@ -66,6 +66,10 @@ Y &= C+I+G \\
 \[ i = a - \frac{M ^{s}}{\$ Y } = .1 \]
 *** DONE 2.b.2
 \[ M ^{s} = \$ Y(a-i) = \$ 11T \]
-** TODO Maintaining the interest rate [/]
+** DONE Maintaining the interest rate [2/2]
+*** DONE 2.c.1
+\[ i = .16 \]
+*** DONE 2.c.2
+\[ M ^{s} = 13.75 \]
 ** TODO Changing the interest rate [/]
 * TODO Question 3 [/]
