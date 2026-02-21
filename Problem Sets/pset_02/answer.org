@@ -47,8 +47,18 @@ Y &= C+I+G \\
 *** DONE 1.b.5
 \[ S= I \]
 
-* TODO Question 2 [0/4]
-** TODO Demand for money and bonds [/]
+* TODO Question 2 [1/4]
+** DONE Demand for money and bonds [2/2]
+*** DONE 2.a.1
+利率是如何影响货币需求的。
+利率增加，机会成本增加，市场倾向于购买债券。
+于是市场上面的货币需求减少了。
+*** DONE 2.a.2
+\[ \$ P_{B} (1+i) = 120 \]
+这个债券在现在的实际价格应该如此计算，
+过了一年之后随着利率的膨胀应该是 $120
+
+\[ i = \frac{\$ 120 - \$ P_{B}}{\$ P_{B}} \]
 ** TODO Determining the interest rate [/]
 ** TODO Maintaining the interest rate [/]
 ** TODO Changing the interest rate [/]
