@@ -1,7 +1,7 @@
 #+title: Problem Set 2 Answer
 
-* TODO Question 1 [0/2]
-** TODO Endogenous T [3/3]
+* TODO Question 1 [1/2]
+** DONE Endogenous T [3/3]
 *** DONE 1.a.1
 \begin{align*}
 Y &=  c_0 + c_1 (Y - t_0 - t_1 Y) + I +G \\
@@ -17,7 +17,7 @@ T-G &= t_0 + t_1 Y -G \\
 &= t_0 + \frac{t_1(c_{0}+c_{1}t_{0}+I)}{1-c_{1}+c_{1}t_{1}} - G \frac{(1-c_{1})(1-t_{1})}{1-c_{1}(1-t_{1})}
 \end{align*}
 
-will not decrease more than 1. 
+will not decrease more than 1.
 
 ** TODO Balanced Budget [/]
 * TODO Question 2 [/]
