@@ -19,7 +19,7 @@ T-G &= t_0 + t_1 Y -G \\
 
 will not decrease more than 1.
 
-** TODO Balanced Budget [3/5]
+** TODO Balanced Budget [4/5]
 *** DONE 1.b.1
 only \( I \) is exogenous.
 *** DONE 1.b.2
@@ -34,7 +34,16 @@ Y &= C+I+G \\
 Y &= C+I+G \\
 &= \frac{c_{0}+I}{1-c_{1}} + G
 \end{align*}
-*** TODO 1.b.4
+*** DONE 1.b.4
+需要解释的点在于，为什么不同的参数下面政府支出对于生产的贡献率不同。
+
+需要注意的是收到的税是政府的可支出量，
+根本在于收的税是如何对支出产生影响的，政府愿意支出多少比例的税。
+
+收了税实际上是影响了消费者的信心，然后影响生产信心，
+于是政府支出对于生产的影响减小了。
+
+第二个由于政府愿意支出所有的收入，加强了消费者的信心，于是贡献率提高了。
 *** TODO 1.b.5
 * TODO Question 2 [/]
 
