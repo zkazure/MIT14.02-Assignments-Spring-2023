@@ -19,7 +19,7 @@ T-G &= t_0 + t_1 Y -G \\
 
 will not decrease more than 1.
 
-** TODO Balanced Budget [2/5]
+** TODO Balanced Budget [3/5]
 *** DONE 1.b.1
 only \( I \) is exogenous.
 *** DONE 1.b.2
@@ -29,7 +29,11 @@ Y &= C+I+G \\
 &= c_{0} + c_{1}Y + (1-c_{1})(t_{0} + t_{1} Y) + I \\
 &= \frac{c_{0} + (1-c_{1})t_{0} + I}{(1-c_{1})(1-t_{1})}
 \end{align*}
-*** TODO 1.b.3
+*** DONE 1.b.3
+\begin{align*}
+Y &= C+I+G \\
+&= \frac{c_{0}+I}{1-c_{1}} + G
+\end{align*}
 *** TODO 1.b.4
 *** TODO 1.b.5
 * TODO Question 2 [/]
