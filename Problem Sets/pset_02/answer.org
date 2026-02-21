@@ -1,6 +1,6 @@
 #+title: Problem Set 2 Answer
 
-* TODO Question 1 [2/2]
+* DONE Question 1 [2/2]
 ** DONE Endogenous T [3/3]
 *** DONE 1.a.1
 \begin{align*}
