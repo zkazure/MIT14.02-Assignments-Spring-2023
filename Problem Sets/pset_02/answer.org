@@ -47,7 +47,7 @@ Y &= C+I+G \\
 *** DONE 1.b.5
 \[ S= I \]
 
-* TODO Question 2 [4/4]
+* DONE Question 2 [4/4]
 ** DONE Demand for money and bonds [2/2]
 *** DONE 2.a.1
 利率是如何影响货币需求的。
