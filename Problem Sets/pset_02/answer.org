@@ -82,7 +82,7 @@ they should increase money supply.
 *** DONE 2.d.3
 interest rate will not less than zero.
 The overflow money will flood into assets.
-* TODO Question 3 [1/1]
+* DONE Question 3 [1/1]
 ** DONE a [3/3]
 *** DONE 3.a.1
 Because the interest rate is high,
