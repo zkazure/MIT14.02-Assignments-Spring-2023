@@ -82,8 +82,8 @@ they should increase money supply.
 *** DONE 2.d.3
 interest rate will not less than zero.
 The overflow money will flood into assets.
-* TODO Question 3 [0/1]
-** TODO a [2/3]
+* TODO Question 3 [1/1]
+** DONE a [3/3]
 *** DONE 3.a.1
 Because the interest rate is high,
 you have to return much more money than you borrowed.
@@ -100,4 +100,7 @@ Z &= C + I +G \\
 \end{align*}
 
 \[ Y = \frac{1}{1 - (c_1 + b_1)} (c_0 + b_0 + G - c_1 T - b_2 i) \]
-*** TODO 3.a.3
+*** DONE 3.a.3
+- multiplier: \( \frac{1}{1- (c_1 + b_1)} \)
+- \( \frac{\mathrm{d} Y}{\mathrm{d} G} = \frac{1}{1- (c_1 + b_1)} \)
+- smaller.
