@@ -1,0 +1,110 @@
+#+title: Problem Set 2 Answer
+
+* DONE Question 1 [2/2]
+** DONE Endogenous T [3/3]
+*** DONE 1.a.1
+\begin{align*}
+Y &=  c_0 + c_1 (Y - t_0 - t_1 Y) + I +G \\
+  &= \frac{c_{0}+c_{1}t_{0}+I+G}{1-c_{1}+c_{1}t_{1}}
+\end{align*}
+*** DONE 1.a.2
+\[ \frac{\mathrm{d}Y }{\mathrm{d}G } = \frac{1}{1 - c_{1} + c_{1}t_{1}} \]
+
+smaller.
+*** DONE 1.a.3
+\begin{align*}
+T-G &= t_0 + t_1 Y -G \\
+&= t_0 + \frac{t_1(c_{0}+c_{1}t_{0}+I)}{1-c_{1}+c_{1}t_{1}} - G \frac{(1-c_{1})(1-t_{1})}{1-c_{1}(1-t_{1})}
+\end{align*}
+
+will not decrease more than 1.
+
+** DONE Balanced Budget [5/5]
+*** DONE 1.b.1
+only \( I \) is exogenous.
+*** DONE 1.b.2
+\begin{align*}
+Y &= C+I+G \\
+&= (c_{0} + c_{1}(Y-T)) + I + T \\
+&= c_{0} + c_{1}Y + (1-c_{1})(t_{0} + t_{1} Y) + I \\
+&= \frac{c_{0} + (1-c_{1})t_{0} + I}{(1-c_{1})(1-t_{1})}
+\end{align*}
+*** DONE 1.b.3
+\begin{align*}
+Y &= C+I+G \\
+&= \frac{c_{0}+I}{1-c_{1}} + G
+\end{align*}
+*** DONE 1.b.4
+- 在平衡预算下，政府的将所有税收都用于政府支出，
+  政府支出增加，直接减少了相同数量的消费者的收入。
+  因此消费下降的幅度和政府支出增加的幅度完全相同。
+- 在内生税收下，政府支出增加了产出，因此间接增加了税收。
+  但是税收增加幅度不如平衡预算时期，也就是消费者的收入更多，因此乘数会变大。
+- 在外生税收的情况下，由于政府支出不影响税收，因此消费者收入增加幅度最大，
+  因此乘数最大。
+*** DONE 1.b.5
+\[ S= I \]
+
+* DONE Question 2 [4/4]
+** DONE Demand for money and bonds [2/2]
+*** DONE 2.a.1
+利率是如何影响货币需求的。
+利率增加，机会成本增加，市场倾向于购买债券。
+于是市场上面的货币需求减少了。
+*** DONE 2.a.2
+\[ \$ P_{B} (1+i) = 120 \]
+这个债券在现在的实际价格应该如此计算，
+过了一年之后随着利率的膨胀应该是 $120
+
+\[ i = \frac{\$ 120 - \$ P_{B}}{\$ P_{B}} \]
+** DONE Determining the interest rate [2/2]
+*** DONE 2.b.1
+\[ M ^{s} = M ^{d} = \$ Y(a-i) \]
+
+\[ i = a - \frac{M ^{s}}{\$ Y } = .1 \]
+*** DONE 2.b.2
+\[ M ^{s} = \$ Y(a-i) = \$ 11T \]
+** DONE Maintaining the interest rate [2/2]
+*** DONE 2.c.1
+\[ i = .16 \]
+*** DONE 2.c.2
+\[ M ^{s} = 13.75 \]
+** DONE Changing the interest rate [3/3]
+*** DONE 2.d.1
+\[ M ^{s} = M ^{d} = \$ Y(a-i) \]
+
+\( \$ 12 T \)
+*** DONE 2.d.2
+If they want decrease interest rate,
+they should increase money supply.
+
+也就是说央行通过创造货币还购买债券。
+*** DONE 2.d.3
+interest rate will not less than zero.
+The overflow money will flood into assets.
+
+这时候遇到了流动性陷阱。
+由于利率为 0, 持有债券还是货币没有什么区别，
+人们更倾向于把资产以货币的形式持有。
+* DONE Question 3 [1/1]
+** DONE a [3/3]
+*** DONE 3.a.1
+Because the interest rate is high,
+you have to return much more money than you borrowed.
+As a result, a firm tend to not borrow any more.
+
+If a firm have enough found, they tend to rent it to other people,
+rather than invest into new project.
+
+*** DONE 3.a.2
+\begin{align*}
+Z &= C + I +G \\
+  &= c_0 + c_1(Y+T) + b_0 + b_1 Y -b_2 i +G \\
+  &= c_0 + b_0 + G - \subset_1 T + (c_1 + b_1) Y - b_2 i
+\end{align*}
+
+\[ Y = \frac{1}{1 - (c_1 + b_1)} (c_0 + b_0 + G - c_1 T - b_2 i) \]
+*** DONE 3.a.3
+- multiplier: \( \frac{1}{1- (c_1 + b_1)} \)
+- \( \frac{\mathrm{d} Y}{\mathrm{d} G} = \frac{1}{1- (c_1 + b_1)} \)
+- larger
