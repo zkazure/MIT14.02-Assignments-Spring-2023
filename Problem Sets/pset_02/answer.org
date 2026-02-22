@@ -83,7 +83,7 @@ they should increase money supply.
 interest rate will not less than zero.
 The overflow money will flood into assets.
 * TODO Question 3 [0/1]
-** TODO a [1/3]
+** TODO a [2/3]
 *** DONE 3.a.1
 Because the interest rate is high,
 you have to return much more money than you borrowed.
@@ -92,5 +92,12 @@ As a result, a firm tend to not borrow any more.
 If a firm have enough found, they tend to rent it to other people,
 rather than invest into new project.
 
-*** TODO 3.a.2
+*** DONE 3.a.2
+\begin{align*}
+Z &= C + I +G \\
+  &= c_0 + c_1(Y+T) + b_0 + b_1 Y -b_2 i +G \\
+  &= c_0 + b_0 + G - \subset_1 T + (c_1 + b_1) Y - b_2 i
+\end{align*}
+
+\[ Y = \frac{1}{1 - (c_1 + b_1)} (c_0 + b_0 + G - c_1 T - b_2 i) \]
 *** TODO 3.a.3
