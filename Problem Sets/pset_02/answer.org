@@ -47,7 +47,7 @@ Y &= C+I+G \\
 *** DONE 1.b.5
 \[ S= I \]
 
-* TODO Question 2 [3/4]
+* TODO Question 2 [4/4]
 ** DONE Demand for money and bonds [2/2]
 *** DONE 2.a.1
 利率是如何影响货币需求的。
@@ -71,7 +71,7 @@ Y &= C+I+G \\
 \[ i = .16 \]
 *** DONE 2.c.2
 \[ M ^{s} = 13.75 \]
-** TODO Changing the interest rate [2/3]
+** DONE Changing the interest rate [3/3]
 *** DONE 2.d.1
 \[ M ^{s} = M ^{d} = \$ Y(a-i) \]
 
@@ -79,5 +79,7 @@ Y &= C+I+G \\
 *** DONE 2.d.2
 If they want decrease interest rate,
 they should increase money supply.
-*** TODO 2.d.3
+*** DONE 2.d.3
+interest rate will not less than zero.
+The overflow money will flood into assets.
 * TODO Question 3 [/]
